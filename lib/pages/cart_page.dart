@@ -79,7 +79,79 @@ class CartPage extends StatelessWidget {
           CartCard(),
           CartCard(),
           CartCard(),
+          CartCard(),
+          CartCard(),
+          CartCard(),
         ],
+      );
+    }
+
+    Widget customButtomNav() {
+      return SizedBox(
+        height: 150,
+        child: Column(
+          children: [
+            Padding(
+              padding: EdgeInsets.symmetric(
+                horizontal: defaultMargin,
+                vertical: 8,
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Subtotal',
+                    style: primaryTextStyle,
+                  ),
+                  Text(
+                    '\$287,68',
+                    style: priceTextStyle.copyWith(
+                      fontSize: 16,
+                      fontWeight: bold,
+                    ),
+                  )
+                ],
+              ),
+            ),
+            Divider(
+              thickness: 0.3,
+              color: subtitleColor,
+            ),
+            const SizedBox(
+              height: 16,
+            ),
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: defaultMargin),
+              height: 50,
+              child: TextButton(
+                onPressed: () {},
+                style: TextButton.styleFrom(
+                  backgroundColor: primaryColor,
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Continue to Checkout',
+                      style: primaryTextStyle.copyWith(
+                        fontSize: 16,
+                        fontWeight: semiBold,
+                      ),
+                    ),
+                    Image.asset(
+                      'assets/images/icon_next.png',
+                      width: 14,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
       );
     }
 
@@ -87,6 +159,7 @@ class CartPage extends StatelessWidget {
       backgroundColor: backgroundColor2,
       appBar: header(),
       body: listCart(),
+      bottomNavigationBar: customButtomNav(),
     );
   }
 }
