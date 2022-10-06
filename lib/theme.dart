@@ -23,6 +23,7 @@ Color backgroundColor6 = const Color(0xffECEDEF);
 Color primaryTextColor = const Color(0xffF1F0F2);
 Color secondaryTextColor = const Color(0xff999999);
 Color subtitleColor = const Color(0xff504F5E);
+Color redTextColor = const Color(0xffED6363);
 
 TextStyle primaryTextStyle = GoogleFonts.poppins(
   color: primaryTextColor,
@@ -46,6 +47,10 @@ TextStyle purpleTextStyle = GoogleFonts.poppins(
 
 TextStyle blackTextStyle = GoogleFonts.poppins(
   color: blackColor,
+);
+
+TextStyle redTextStyle = GoogleFonts.poppins(
+  color: redTextColor,
 );
 
 FontWeight light = FontWeight.w300;
