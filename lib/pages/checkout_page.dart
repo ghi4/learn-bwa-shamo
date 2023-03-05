@@ -6,8 +6,29 @@ class CheckoutPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    header() {
+      return AppBar(
+        backgroundColor: backgroundColor1,
+        elevation: 0,
+        centerTitle: true,
+        title: const Text(
+          'Checkout Detail',
+        ),
+      );
+    }
+
+    Widget content() {
+      return ListView(
+        padding: EdgeInsets.symmetric(
+          horizontal: defaultMargin,
+        ),
+        children: const [],
+      );
+    }
+
     return Scaffold(
       backgroundColor: backgroundColor3,
+      appBar: header(),
     );
   }
 }
